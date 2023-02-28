@@ -25,14 +25,6 @@ variable "logging_configuration" {
     enabled     = optional(bool, false)
     prefix      = optional(string)
   })
-  validation {
-    condition     = can(var.logging_configuration.enabled == false && var.logging_configuration.bucket_name == null && var.logging_configuration.prefix == null)
-    error_message = "If logging configuration is disabled don't set the bucket_name and prefix"
-  }
-  validation {
-    condition     = can(var.logging_configuration.enabled && var.logging_configuration.bucket_name != null && var.logging_configuration.prefix != null)
-    error_message = "If logging configuration is enabled the bucket_name and prefix must be set"
-  }
 }
 
 variable "public_access_configuation" {
