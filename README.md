@@ -44,7 +44,7 @@ No modules.
 
 | Name | Description |
 |------|-------------|
-| <a name="output_bucket_arn"></a> [bucket\_arn](#output\_bucket\_arn) | The S3 bucket ARN |
-| <a name="output_bucket_name"></a> [bucket\_name](#output\_bucket\_name) | The name of S3 bucket |
-| <a name="output_bucket_region"></a> [bucket\_region](#output\_bucket\_region) | The AWS region in which the S3 bucket is deployed |
+| <a name="output_arn"></a> [arn](#output\_arn) | The S3 bucket ARN |
+| <a name="output_id"></a> [id](#output\_id) | The name of S3 bucket |
+| <a name="output_region"></a> [region](#output\_region) | The AWS region in which the S3 bucket is deployed |
 <!-- END_TF_DOCS -->
