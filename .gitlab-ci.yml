@@ -4,17 +4,4 @@ variables:
   TERRAFORM_MODULE_SYSTEM: aws
 
 include:
-  - template: Terraform/Module-Base.gitlab-ci.yml  # https://gitlab.com/gitlab-org/gitlab/blob/master/lib/gitlab/ci/templates/Terraform/Module-Base.gitlab-ci.yml
-  - template: Jobs/SAST-IaC.gitlab-ci.yml          # https://gitlab.com/gitlab-org/gitlab/blob/master/lib/gitlab/ci/templates/Jobs/SAST-IaC.gitlab-ci.yml
-
-stages:
-  - validate
-  - build
-  - test
-  - deploy
-
-fmt:
-  extends: .terraform-module:fmt
-
-deploy:
-  extends: .terraform-module:deploy
+  template: Terraform-Module.gitlab-ci.yml
