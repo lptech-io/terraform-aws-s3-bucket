@@ -1,8 +1,7 @@
 ---
 variables:
   TERRAFORM_MODULE_NAME: s3-bucket
-  TERRAFORM_MODULE_SYSTEM: local
-  TERRAFORM_MODULE_VERSION: 1.0.0
+  TERRAFORM_MODULE_SYSTEM: aws
 
 include:
   - template: Terraform/Module-Base.gitlab-ci.yml  # https://gitlab.com/gitlab-org/gitlab/blob/master/lib/gitlab/ci/templates/Terraform/Module-Base.gitlab-ci.yml
