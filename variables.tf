@@ -43,8 +43,12 @@ variable "public_access_configuation" {
   })
 }
 
-variable "versioning_enabled" {
-  default     = false
+variable "versioning_status" {
+  default     = "Disabled"
   description = "Enable versioning on the bucket"
-  type        = bool
+  type        = string
+  validation {
+    condition = contains(["Enabled", "Disabled", "Suspended"], var.versioning_status)
+    error_message = "Versioning status can be: ['Enabled', 'Disabled', 'Suspended']"
+  }
 }

@@ -50,6 +50,6 @@ resource "aws_s3_bucket_logging" "logging_configuration" {
 resource "aws_s3_bucket_versioning" "versioning" {
   bucket = aws_s3_bucket.bucket.id
   versioning_configuration {
-    status = var.versioning_enabled ? "Enabled" : try("Disabled", "Suspended")
+    status = var.versioning_status
   }
 }
