@@ -48,7 +48,7 @@ variable "versioning_status" {
   description = "Enable versioning on the bucket"
   type        = string
   validation {
-    condition = contains(["Enabled", "Disabled", "Suspended"], var.versioning_status)
+    condition     = contains(["Enabled", "Disabled", "Suspended"], var.versioning_status)
     error_message = "Versioning status can be: ['Enabled', 'Disabled', 'Suspended']"
   }
 }
