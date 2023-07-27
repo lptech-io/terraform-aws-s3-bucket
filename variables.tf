@@ -27,6 +27,12 @@ variable "logging_configuration" {
   })
 }
 
+variable "object_ownership" {
+  default     = "BucketOwnerEnforced"
+  description = "Set the bucket ownership"
+  type        = string
+}
+
 variable "public_access_configuation" {
   default = {
     block_public_acls       = true
